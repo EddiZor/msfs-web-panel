@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #050505;
+    color: #00ff00; /* Testo verde stile display avionico */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Riempie verticalmente */
+    width: 100vw;  /* Riempie orizzontalmente */
+    overflow: hidden; /* Nasconde le barre di scorrimento */
+}
+
+.panel-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    max-height: 720px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background-color: #111;
+}
+
+.instrument {
+    background-color: #1a1a1a;
+    border: 2px solid #2a2a2a;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.label {
+    font-size: 1.8rem;
+    color: #888;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.value {
+    font-size: 5.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+.disconnected .value {
+    color: #ff3333;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.4);
+}

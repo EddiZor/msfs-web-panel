@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSFS Universal Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="panel-container">
+        <!-- Display Telemetria -->
+        <div class="instrument">
+            <span class="label">AIRSPEED (KIAS)</span>
+            <span id="val-airspeed" class="value">000</span>
+        </div>
+        <div class="instrument">
+            <span class="label">ALTITUDE (FT)</span>
+            <span id="val-altitude" class="value">00000</span>
+        </div>
+        <div class="instrument">
+            <span class="label">HEADING (MAG)</span>
+            <span id="val-heading" class="value">000</span>
+        </div>
+        <div class="instrument">
+            <span class="label">GEAR</span>
+            <span id="val-gear" class="value">UP</span>
+        </div>
+        <div class="instrument">
+            <span class="label">FLAPS (%)</span>
+            <span id="val-flaps" class="value">0</span>
+        </div>
+        
+        <!-- Pulsanti di Comando -->
+        <div class="instrument" style="border: none; background: transparent; box-shadow: none; gap: 10px;">
+            <button onclick="sendCommand('GEAR_TOGGLE')" style="padding: 15px; font-size: 1.2rem; cursor: pointer;">TOGGLE GEAR</button>
+            <button onclick="sendCommand('FLAPS_INC')" style="padding: 15px; font-size: 1.2rem; cursor: pointer;">FLAPS DOWN</button>
+            <button onclick="sendCommand('FLAPS_DEC')" style="padding: 15px; font-size: 1.2rem; cursor: pointer;">FLAPS UP</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
